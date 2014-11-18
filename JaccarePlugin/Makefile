@@ -25,3 +25,5 @@ val:
 	export LD_LIBRARY_PATH=$(PATH_TO_LIB_SCILAB):$(PATH_TO_LIB_CALL_SCILAB)
 	metil_comp -ne --valgrind -O3 -g3 $(DIR_SOURCES_SOCA) $(SCILAB_LDFLAGS) -L$(PATH_TO_LIB_SCILAB) -L$(PATH_TO_LIB_CALL_SCILAB) $(SCILAB_CFLAGS) -Wl,-rpath $(PATH_TO_LIB_SCILAB) -Wl,-rpath $(PATH_TO_LIB_CALL_SCILAB) src/main.cpp
 
+launch:
+	./ServerPlugin/src/compilations/ServerPlugin_src_main_cpp.exe
